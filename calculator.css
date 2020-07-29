@@ -1,64 +1,61 @@
-*{
+html{
     margin: 0;
     box-sizing: border-box;
+    background-color: rgba(241, 199, 110, 0.452);
 }
 
-#container{
-display:flex;
-justify-content: center;
-}
+
 
 #calculator-body{
-    background-color: gray;
-    border: 2px solid black;
-    width: 400px;
-    height: 600px;
-    margin-top: 75px;
-    position: absolute;
+    justify-content: center;
+    align-content: center;
     display: grid;
     grid-template-columns: repeat(4,100px);
-    grid-auto-rows: 100px;
-
-}
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);    
+    margin-top: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px ivory;
+    background-color: rgb(68, 109, 64);
+    width: 400px;
+    border-radius: 60px;
+    margin: 100px auto auto auto;
+    }
 
 .screen-container{
-    position: absolute;
-    margin: auto;
-    left: 0%;
-    width: 100%;
-    justify-self: center;
-    height: 3rem;
-    font-size: 25px;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: rgb(59, 59, 59);
+    flex-direction: column;
+    padding:10px;
+    border: 2px solid magenta;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
 }
 
 .screen{
-    position: absolute;
-    margin: auto;
-    top: 20px;
-    left: 0%;
-    width: 100%;
-    justify-self: center;
-    height: 2rem;
-    background-color: rgb(243, 195, 123);
+    font-size: 2.5rem;
 }
 
 .screen-1{
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    justify-self: center;
-    height: 2rem;
-    background-color: rgb(250, 158, 20);
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 button{
     height: 100px;
-    width: 100px;
-    margin-top: 5rem;
-    font-size: 20px;
+    font-size: 2rem;
     cursor: pointer;
+    transition: .2s;
+    border: 2px solid magenta;
+    background-color: rgb(177, 81, 245);
+    color: ivory;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50px;
+}
+button:hover{
+    transform: scale(1.1);
 }
 .span-two{
     grid-column:span 2;
